@@ -1,14 +1,14 @@
 public class Villa extends House{
 
-    public void add() {
+    public void add(String saleType,int price,int area,String location) {
 
     }
 
-    public void search(String location,int area,int price,String SaleType) {
+    public void search(String saleType,int price,int area,String location) {
 
     }
 
-    public void sell() {
+    public void sell(int id) {
 
     }
 
