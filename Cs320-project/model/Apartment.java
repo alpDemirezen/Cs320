@@ -1,7 +1,10 @@
 public class Apartment extends House {
 
-    public Apartment() {
-
+    public Apartment(String saleType, int price, int area, String location) {
+        super.saleType = saleType;
+        super.price = price;
+        super.area = area;
+        super.location = location;
     }
 
     public void add(String saleType, int price, int area, String location) {
@@ -9,6 +12,8 @@ public class Apartment extends House {
         super.price = price;
         super.area=area;
         super.location = location;
+
+        super.houses.add(new Apartment(saleType, price, area, location));
 
     }
 
