@@ -32,7 +32,25 @@ public class Villa extends House {
     }
 
     public void setNumFloors(int numFloors) {
+
         this.numFloors = numFloors;
     }
 
+    // Set Id method added (egowic)
+    public void setId(int Id) {
+        this.id = Id;
+    }
+
+    // Get Id Method added (egowic)
+    public int getId() {
+        this.id = id;
+        return id;
+    }
+
+    // printHouse Method added (egowic)
+    public void printHouse(){
+        System.out.println("Sale Type Of The Villa: " + this.saleType + "\n" + "Price Of The Villa: " + this.price +
+                "\n" + "Area Of The Villa: " + this.area + "\n" + "Location Of The Villa " + this.location +
+                "\n" + "Number Of Floors Of The Villa " + numFloors + "\n");
+    }
 }
