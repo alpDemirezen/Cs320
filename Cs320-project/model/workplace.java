@@ -1,25 +1,19 @@
-public class workplace {
+public class workplace implements Sistem{
+
+
 
     private int id;
+    private String saleType;
+    private int price;
     private int area;
     private String location;
-    private int price;
-    private String saleType;
 
-    public workplace(int id, int area, String location, int price, String saleType) {
-        this.id = id;
+
+    public workplace(String saleType, int price, int area, String location) {
+        this.saleType = saleType;
+        this.price = price;
         this.area = area;
         this.location = location;
-        this.price = price;
-        this.saleType = saleType;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public int getArea() {
@@ -55,16 +49,37 @@ public class workplace {
     }
 
 
-    public void search(int id,String location , int price , int area){
-
-    }
-    public void add(int id,String location , int price , int area){
-
-    }
-    public void sell(int id,String location , int price , int area){
-
+    public void setId(int Id) {
+        this.id = Id;
     }
 
+
+    public int getId() {
+        this.id = id;
+        return id;
+    }
+
+
+    @Override
+    public void search(String saleType, int price, int area, String location) {
+
+    }
+
+    @Override
+    public void add(String saleType, int price, int area, String location) {
+
+    }
+
+    @Override
+    public void sell(int id) {
+
+    }
+
+
+    public void printworkplace(){
+        System.out.println("Sale Type Of The workplace: " + this.saleType + "\n" + "Price Of The workplace: " + this.price +
+                "\n" + "Area Of The workplace: " + this.area + "\n" + "Location Of The workplace " + this.location + "\n");
+    }
 
 
 }

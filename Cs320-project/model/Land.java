@@ -1,14 +1,14 @@
-public class Land {
+public class Land implements Sistem {
+
+    private int price;
     private int area;
     private String location;
-    private int price;
     private int id;
 
-    public Land(int area, String location, int price, int id) {
+    public Land(int price, int area, String location) {
+        this.price = price;
         this.area = area;
         this.location = location;
-        this.price = price;
-        this.id = id;
     }
 
     public int getArea() {
@@ -35,23 +35,40 @@ public class Land {
         this.price = price;
     }
 
+
+
+
     public int getId() {
+        this.id = id;
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public void search(int id,String location , int price , int area){
-
-    }
-    public void add(int id,String location , int price , int area){
-
-    }
-    public void sell(int id,String location , int price , int area){
-
+    public void setId(int Id) {
+        this.id = Id;
     }
 
 
+
+
+
+
+    @Override
+    public void search(String saleType, int price, int area, String location) {
+
+    }
+
+    @Override
+    public void add(String saleType, int price, int area, String location) {
+
+    }
+
+    @Override
+    public void sell(int id) {
+
+    }
+
+    public void printLand(){
+        System.out.println("Price Of The Land: " + this.price +
+                "\n" + "Area Of The Land: " + this.area + "\n" + "Location Of The Land " + this.location + "\n");
+    }
 }
