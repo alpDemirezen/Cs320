@@ -16,5 +16,7 @@ public class Main {
 
         houses.get(0).printHouse();
 
+        System.out.println("Id Of The ege Apartment: " + ege.getId());
+
     }
 }

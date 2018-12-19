@@ -7,5 +7,4 @@ public abstract class House implements Sistem {
     public abstract void sell(int id);
     // printHouse Method added (egowic)
     public abstract void printHouse();
-
 }

@@ -17,7 +17,7 @@ public class Apartment extends House {
     public void search(String saleType,int price,int area,String location) {
         super.saleType = saleType;
         super.price = price;
-        super.area=area;
+        super.area = area;
         super.location = location;
     }
 
@@ -53,6 +53,12 @@ public class Apartment extends House {
     // Set Id method added (egowic)
     public void setId(int Id) {
         this.id = Id;
+    }
+
+    // Get Id Method added (egowic)
+    public int getId() {
+        this.id = id;
+        return id;
     }
 
     // printHouse Method added (egowic)

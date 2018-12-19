@@ -41,6 +41,12 @@ public class Villa extends House {
         this.id = Id;
     }
 
+    // Get Id Method added (egowic)
+    public int getId() {
+        this.id = id;
+        return id;
+    }
+
     // printHouse Method added (egowic)
     public void printHouse(){
         System.out.println("Sale Type Of The Villa: " + this.saleType + "\n" + "Price Of The Villa: " + this.price +
