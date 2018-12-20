@@ -44,12 +44,14 @@ public class LoginPanel extends JFrame {
 
     public class LoginListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
-            if (username.equals(txtUsername.getText()) && Arrays.equals(password.toCharArray(), txtPassword.getPassword())) {
-                JOptionPane.showMessageDialog(null, "Logged in successfully!");
-            } else {
-                JOptionPane.showMessageDialog(null, "Log in failed!");
+                if (username.equals(txtUsername.getText()) && Arrays.equals(password.toCharArray(), txtPassword.getPassword())) {
+                    JOptionPane.showMessageDialog(null, "Logged in successfully!");
+                    Operators operator = new Operators();
+                    operator.initialize();
+                } else {
+                    JOptionPane.showMessageDialog(null, "Log in failed!");
+                }
             }
-        }
     }
 
     public class CancelListener implements ActionListener {
