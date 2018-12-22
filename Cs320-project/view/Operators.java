@@ -1,4 +1,6 @@
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class Operators extends JFrame {
 
@@ -8,7 +10,9 @@ public class Operators extends JFrame {
         operatorsFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         JPanel buttonPanel = new JPanel();
         JButton addButton = new JButton("ADD");
+        addButton.addActionListener(new Add());
         JButton searchButton = new JButton("SEARCH");
+
 
         buttonPanel.setLayout(null);
         buttonPanel.setBounds(0,0,250,200);
@@ -26,5 +30,11 @@ public class Operators extends JFrame {
 
 
 
+    }
+    public class Add implements ActionListener {
+        public void actionPerformed(ActionEvent e) {
+           AddPanel addPanel = new AddPanel();
+           addPanel.initialize();
+        }
     }
 }
