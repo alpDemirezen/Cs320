@@ -1,7 +1,7 @@
 public class workplace implements Sistem{
 
-    private int id, price, area;
-    private String saleType, realEstateType, location;
+    public int id, price, area;
+    public String saleType, realEstateType, location;
 
 
     public workplace(String saleType, int price, int area, String location, String realEstateType) {
@@ -53,6 +53,10 @@ public class workplace implements Sistem{
     public int getId() {
         this.id = id;
         return id;
+    }
+
+    public String getType() {
+        return realEstateType;
     }
 
 
