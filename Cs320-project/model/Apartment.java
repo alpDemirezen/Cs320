@@ -1,5 +1,5 @@
 public class Apartment extends House {
-// to push
+
     public Apartment(String saleType, int price, int area, String location, String realEstateType) {
         super.saleType = saleType;
         super.price = price;

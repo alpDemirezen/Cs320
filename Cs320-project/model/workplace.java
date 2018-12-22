@@ -1,5 +1,5 @@
 public class workplace implements Sistem{
-    // to push
+
     private int id, price, area;
     private String saleType, realEstateType, location;
 

@@ -1,7 +1,6 @@
 public class Villa extends House {
-    // to push
-    private int numFloors;
 
+    private int numFloors;
 
     public Villa(String saleType, int price, int area, String location, String realEstateType) {
         super.saleType = saleType;
