@@ -1,7 +1,5 @@
 public class workplace implements Sistem{
 
-
-
     private int id, price, area;
     private String saleType, realEstateType, location;
 
@@ -78,7 +76,10 @@ public class workplace implements Sistem{
         System.out.println("Sale Type Of The workplace: " + this.saleType + "\n" + "Price Of The workplace: " + this.price +
                 "\n" + "Area Of The workplace: " + this.area + "\n" + "Location Of The workplace " + this.location + "\n");
     }
-
+    public String toString() {
+        return ("Sale Type Of The workplace: " + this.saleType + "\n" + "Price Of The workplace: " + this.price +
+                "\n" + "Area Of The workplace: " + this.area + "\n" + "Location Of The workplace " + this.location + "\n");
+    }
 
 }
 

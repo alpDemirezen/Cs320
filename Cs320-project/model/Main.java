@@ -3,9 +3,7 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String args[]){
 
-        ArrayList<House> houses = new ArrayList<>();
-        ArrayList<workplace> workplaces = new ArrayList<>();
-        ArrayList<Land> lands = new ArrayList<>();
+        ArrayList<Object> realEstateList = new ArrayList<Object>();
 
         Apartment ege = new Apartment("For Sale", 600000, 180, "Cekmekoy", "Apartment");
 
@@ -15,12 +13,12 @@ public class Main {
 
         Land ahmet= new Land("For Sale", 500000,1000000,"tasdelen", "Land");
 
-        houses.add(ege);
-        houses.add(dede);
+        realEstateList.add(ege);
+        realEstateList.add(dede);
 
-        workplaces.add(alp);
+        realEstateList.add(alp);
 
-        lands.add(ahmet);
+        realEstateList.add(ahmet);
 
         ege.setId(20);
         dede.setId(30);
@@ -29,22 +27,19 @@ public class Main {
 
         System.out.println("Id Of The ege Apartment: " + ege.getId());
 
-        houses.get(0).printHouse();
+        System.out.println(realEstateList.get(0).toString());
 
         System.out.println("Id Of The dede villa: " + dede.getId());
 
-        houses.get(1).printHouse();
+        System.out.println(realEstateList.get(1).toString());
 
         System.out.println("Id Of The alp workplace : " + alp.getId());
 
-        workplaces.get(0).printworkplace();
+        System.out.println(realEstateList.get(0).toString());
 
         System.out.println("Id Of The ahmet land : " + ahmet.getId());
 
-        lands.get(0).printLand();
-
-
-
+        System.out.println(realEstateList.get(0).toString());
 
 
     }
