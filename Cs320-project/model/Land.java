@@ -1,5 +1,5 @@
 public class Land implements Sistem {
-
+    // to push
     private int price, area, id;
     private String location, realEstateType, saleType;
 

@@ -1,4 +1,5 @@
 public abstract class House implements Sistem {
+    // to push
     public int id, price, area;
     public String location, saleType, realEstateType;
 
