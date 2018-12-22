@@ -3,7 +3,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class AddPanel extends JPanel {
+public class AddPanelHouse extends JFrame {
 
     void initialize(){
 
@@ -20,16 +20,18 @@ public class AddPanel extends JPanel {
         JTextField textArea = new JTextField();
         JButton add = new JButton("ADD");
         JButton back = new JButton("Back");
+        JLabel estateType = new JLabel("Estate Type");
+        JTextField textEstateType = new JTextField();
         back.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e) {
-               frame.dispose();
-               TypePanel types = new TypePanel();
-               types.initialize();
+                frame.dispose();
+                TypePanel types = new TypePanel();
+                types.initialize();
             }
 
         });
 
-        panel.setLayout(new GridLayout(5,2));
+        panel.setLayout(new GridLayout(6,2));
         panel.add(location);
         panel.add(textLocation);
         panel.add(price);
@@ -38,11 +40,14 @@ public class AddPanel extends JPanel {
         panel.add(textArea);
         panel.add(saleType);
         panel.add(textSaleType);
+        panel.add(estateType);
+        panel.add(textEstateType);
         panel.add(back);
         panel.add(add);
 
-        frame.setSize(600,400);
+        frame.setSize(700,400);
         frame.getContentPane().add(panel,BorderLayout.CENTER);
         frame.setVisible(true);
-   }
+    }
 }
+

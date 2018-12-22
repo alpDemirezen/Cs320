@@ -13,8 +13,8 @@ public class Operators extends JFrame {
         addButton.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e) {
                 operatorsFrame.dispose();
-                AddPanel add = new AddPanel();
-                add.initialize();
+                TypePanel types = new TypePanel();
+                types.initialize();
             }
 
         });
