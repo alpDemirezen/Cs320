@@ -1,0 +1,53 @@
+{
+	"apartment":[
+					{
+						"saleType": "rental",
+						"price": 100000,
+						"area": 170,
+						"location": "Istanbul"
+					},
+					{
+						"saleType": "for sale",
+						"price": 200000,
+						"area": 150,
+						"location": "Izmir"
+					}
+				],
+	"villa": [
+				{
+						"saleType": "rental",
+						"price": 100000,
+						"area": 170,
+						"location": "Istanbul"
+				},
+				{
+						"saleType": "rental",
+						"price": 100000,
+						"area": 170,
+						"location": "Istanbul"
+				}],
+	"land": [
+				{
+						"price": 100000,
+						"area": 170,
+						"location": "Istanbul"
+				},
+				{
+						"price": 200000,
+						"area": 150,
+						"location": "Izmir"
+				}],
+	"workplace": [
+					{
+						"saleType": "rental",
+						"price": 100000,
+						"area": 170,
+						"location": "Istanbul"
+					},
+					{
+						"saleType": "for sale",
+						"price": 200000,
+						"area": 150,
+						"location": "Izmir"
+					}]
+}

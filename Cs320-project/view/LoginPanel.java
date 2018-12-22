@@ -6,10 +6,10 @@ import java.util.Arrays;
 
 
 public class LoginPanel extends JFrame {
-    String username = "username";
-    String password = "pass";
-    JTextField txtUsername;
-    JPasswordField txtPassword;
+    private String username = "username";
+    private String password = "pass";
+    private JTextField txtUsername;
+    private JPasswordField txtPassword;
 
 
     public static void main(String args[]) {
@@ -37,12 +37,13 @@ public class LoginPanel extends JFrame {
         panel.add(loginButton);
         panel.add(cancelButton);
         frame.getContentPane().add(BorderLayout.CENTER, panel);
-        frame.setSize(250,200);
+        frame.setSize(250, 200);
         frame.setVisible(true);
 
     }
 
     public class LoginListener implements ActionListener {
+        @Override
         public void actionPerformed(ActionEvent e) {
             if (username.equals(txtUsername.getText()) && Arrays.equals(password.toCharArray(), txtPassword.getPassword())) {
                 JOptionPane.showMessageDialog(null, "Logged in successfully!");
@@ -53,6 +54,7 @@ public class LoginPanel extends JFrame {
     }
 
     public class CancelListener implements ActionListener {
+        @Override
         public void actionPerformed(ActionEvent e) {
             System.exit(0);
         }
