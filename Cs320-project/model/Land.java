@@ -1,7 +1,7 @@
 public class Land implements Sistem {
 
-    private int price, area, id;
-    private String location, realEstateType, saleType;
+    public int price, area, id;
+    public String location, realEstateType, saleType;
 
 
     public Land(String saleType, int price, int area, String location, String realEstateType) {
@@ -37,8 +37,6 @@ public class Land implements Sistem {
     }
 
 
-
-
     public int getId() {
         this.id = id;
         return id;
@@ -47,8 +45,6 @@ public class Land implements Sistem {
     public void setId(int Id) {
         this.id = Id;
     }
-
-
 
 
     @Override
@@ -64,6 +60,10 @@ public class Land implements Sistem {
     @Override
     public void sell(int id) {
 
+    }
+
+    public String getType() {
+        return realEstateType;
     }
 
     public void printLand(){

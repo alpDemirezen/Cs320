@@ -44,6 +44,10 @@ public class Villa extends House {
         return id;
     }
 
+    public String getType() {
+        return realEstateType;
+    }
+
     public void printHouse(){
         System.out.println("Sale Type Of The Villa: " + this.saleType + "\n" + "Price Of The Villa: " + this.price +
                 "\n" + "Area Of The Villa: " + this.area + "\n" + "Location Of The Villa " + this.location +
