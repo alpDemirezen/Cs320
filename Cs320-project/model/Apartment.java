@@ -26,29 +26,6 @@ public class Apartment extends House {
         super.id = id;
     }
 
-    public String getSaleType(){
-        this.saleType = saleType;
-
-        return saleType;
-    }
-
-    public int getPrice(){
-        this.price = price;
-
-        return price;
-    }
-
-    public int getArea(){
-        this.area = area;
-
-        return area;
-    }
-
-    public String getLocation(){
-        this.location = location;
-
-        return location;
-    }
 
     // Set Id method added (egowic)
     public void setId(int Id) {

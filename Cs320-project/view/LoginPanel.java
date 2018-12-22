@@ -25,22 +25,23 @@ public class LoginPanel extends JFrame {
         JLabel PasswordLabel = new JLabel("Password:");
         txtUsername = new JTextField(20);
         txtPassword = new JPasswordField(20);
-        JButton loginButton = new JButton("Login");
-        loginButton.addActionListener(new LoginListener());
-        JButton cancelButton = new JButton("Cancel");
-        cancelButton.addActionListener(new CancelListener());
-
-        panel.add(UsernameLabel);
-        panel.add(txtUsername);
         panel.add(PasswordLabel);
         panel.add(txtPassword);
         panel.add(loginButton);
         panel.add(cancelButton);
+
         frame.getContentPane().add(BorderLayout.CENTER, panel);
         frame.setSize(250,200);
         frame.setVisible(true);
 
     }
+    JButton loginButton = new JButton("Login");
+        loginButton.addActionListener(new LoginListener());
+    JButton cancelButton = new JButton("Cancel");
+        cancelButton.addActionListener(new CancelListener());
+
+        panel.add(UsernameLabel);
+        panel.add(txtUsername);
 
     public class LoginListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
@@ -48,6 +49,8 @@ public class LoginPanel extends JFrame {
                     JOptionPane.showMessageDialog(null, "Logged in successfully!");
                     Operators operator = new Operators();
                     operator.initialize();
+
+
                 } else {
                     JOptionPane.showMessageDialog(null, "Log in failed!");
                 }
@@ -59,4 +62,6 @@ public class LoginPanel extends JFrame {
             System.exit(0);
         }
     }
+
 }
+//aa
