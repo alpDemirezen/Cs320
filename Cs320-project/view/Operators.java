@@ -10,7 +10,13 @@ public class Operators extends JFrame {
         operatorsFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         JPanel buttonPanel = new JPanel();
         JButton addButton = new JButton("ADD");
-        addButton.addActionListener(new Add());
+        addButton.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent e) {
+                AddPanel add = new AddPanel();
+                add.initialize();
+            }
+
+        });
         JButton searchButton = new JButton("SEARCH");
 
 
@@ -30,11 +36,5 @@ public class Operators extends JFrame {
 
 
 
-    }
-    public class Add implements ActionListener {
-        public void actionPerformed(ActionEvent e) {
-           AddPanel addPanel = new AddPanel();
-           addPanel.initialize();
-        }
     }
 }

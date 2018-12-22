@@ -1,5 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class AddPanel extends JPanel {
 
@@ -18,6 +20,15 @@ public class AddPanel extends JPanel {
         JTextField textArea = new JTextField();
         JLabel space = new JLabel(" ");
         JButton add = new JButton("ADD");
+        JButton back = new JButton("Back");
+        back.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent e) {
+               frame.dispose();
+               Operators operator = new Operators();
+               operator.initialize();
+            }
+
+        });
 
         panel.setLayout(new GridLayout(5,2));
         panel.add(location);
@@ -28,10 +39,10 @@ public class AddPanel extends JPanel {
         panel.add(textArea);
         panel.add(saleType);
         panel.add(textSaleType);
-        panel.add(space);
+        panel.add(back);
         panel.add(add);
 
-        frame.setSize(400,400);
+        frame.setSize(600,400);
         frame.getContentPane().add(panel,BorderLayout.CENTER);
         frame.setVisible(true);
    }
