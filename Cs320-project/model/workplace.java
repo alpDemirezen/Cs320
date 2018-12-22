@@ -2,18 +2,16 @@ public class workplace implements Sistem{
 
 
 
-    private int id;
-    private String saleType;
-    private int price;
-    private int area;
-    private String location;
+    private int id, price, area;
+    private String saleType, realEstateType, location;
 
 
-    public workplace(String saleType, int price, int area, String location) {
+    public workplace(String saleType, int price, int area, String location, String realEstateType) {
         this.saleType = saleType;
         this.price = price;
         this.area = area;
         this.location = location;
+        this.realEstateType = realEstateType;
     }
 
     public int getArea() {
@@ -61,12 +59,12 @@ public class workplace implements Sistem{
 
 
     @Override
-    public void search(String saleType, int price, int area, String location) {
+    public void search(String saleType, int price, int area, String location, String realEstateType) {
 
     }
 
     @Override
-    public void add(String saleType, int price, int area, String location) {
+    public void add(String saleType, int price, int area, String location, String realEstateType) {
 
     }
 

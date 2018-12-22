@@ -7,16 +7,13 @@ public class Main {
         ArrayList<workplace> workplaces = new ArrayList<>();
         ArrayList<Land> lands = new ArrayList<>();
 
+        Apartment ege = new Apartment("For Sale", 600000, 180, "Cekmekoy", "Apartment");
 
-        // House ege = new Apartment demek yerine Apartment ege = new Apartment diye tanımlamak lazım ki
-        // House classının icinde olmayan Villa ve Apartmenta ozel methodları kullanabilelim... (egowic)
-        Apartment ege = new Apartment("For Sale", 600000, 180, "Cekmekoy");
-        Villa dede = new Villa("For Sale", 600000, 180, "Cekmekoy");
+        Villa dede = new Villa("For Sale", 600000, 180, "Cekmekoy", "Villa");
 
-        workplace alp = new workplace("For Sale", 600000, 180, "Cekmekoy");
+        workplace alp = new workplace("For Rent", 600000, 180, "Cekmekoy", "Workplace");
 
-        Land ahmet= new Land(500000,1000000,"tasdelen");
-
+        Land ahmet= new Land("For Sale", 500000,1000000,"tasdelen", "Land");
 
         houses.add(ege);
         houses.add(dede);
@@ -25,11 +22,6 @@ public class Main {
 
         lands.add(ahmet);
 
-
-
-
-
-        // Örnek id ataması (id unique olarak tanımlayacagı icin set methodu ileride kullanmak ve silme islemi icin gerekli olabilir (egowic)
         ege.setId(20);
         dede.setId(30);
         alp.setId(40);
