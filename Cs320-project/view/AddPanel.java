@@ -3,7 +3,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class AddPanel extends JPanel {
+public class AddPanel extends JFrame {
 
     void initialize(){
 
