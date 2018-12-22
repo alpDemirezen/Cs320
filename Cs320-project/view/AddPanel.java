@@ -19,7 +19,7 @@ public class AddPanel extends JPanel {
         JLabel space = new JLabel(" ");
         JButton add = new JButton("ADD");
 
-        panel.setLayout(new GridLayout(10,1));
+        panel.setLayout(new GridLayout(5,2));
         panel.add(location);
         panel.add(textLocation);
         panel.add(price);
