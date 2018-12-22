@@ -12,6 +12,7 @@ public class Operators extends JFrame {
         JButton addButton = new JButton("ADD");
         addButton.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e) {
+                operatorsFrame.dispose();
                 AddPanel add = new AddPanel();
                 add.initialize();
             }
