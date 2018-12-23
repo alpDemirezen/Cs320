@@ -19,6 +19,14 @@ public class Operators extends JFrame {
 
         });
         JButton searchButton = new JButton("SEARCH");
+        searchButton.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent e) {
+                operatorsFrame.dispose();
+               TypesOfSearch search = new TypesOfSearch();
+               search.initialize();
+            }
+
+        });
 
 
         buttonPanel.setLayout(null);
