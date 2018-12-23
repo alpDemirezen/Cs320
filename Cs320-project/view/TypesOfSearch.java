@@ -26,6 +26,8 @@ public class TypesOfSearch {
         idButton.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e) {
                 operatorsFrame.dispose();
+                IdSearch idSearch = new IdSearch();
+                idSearch.initialize();
             }
 
         });

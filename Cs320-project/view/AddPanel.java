@@ -19,6 +19,13 @@ public class AddPanel extends JFrame {
         JLabel area = new JLabel("Area");
         JTextField textArea = new JTextField();
         JButton add = new JButton("ADD");
+        add.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent e) {
+                frame.dispose();
+               // model ve database sonrası eklenecek.
+            }
+
+        });
         JButton back = new JButton("Back");
         back.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e) {

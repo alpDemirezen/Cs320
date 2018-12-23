@@ -6,7 +6,7 @@ import java.awt.event.ActionListener;
 public class AddPanelHouse extends JFrame {
 
     void initialize(){
-
+        String[] types = {"For Sale","For Rent"};
         JFrame frame = new JFrame();
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         JPanel panel = new JPanel();
@@ -19,9 +19,14 @@ public class AddPanelHouse extends JFrame {
         JLabel area = new JLabel("Area");
         JTextField textArea = new JTextField();
         JButton add = new JButton("ADD");
+        add.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent e) {
+                frame.dispose();
+               // database ve model sonrası eklenecek
+            }
+
+        });
         JButton back = new JButton("Back");
-        JLabel estateType = new JLabel("Estate Type");
-        JTextField textEstateType = new JTextField();
         back.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e) {
                 frame.dispose();
@@ -30,8 +35,12 @@ public class AddPanelHouse extends JFrame {
             }
 
         });
+        JComboBox estateType = new JComboBox(types);
+        JLabel labelEstateType = new JLabel("Estate Type");
+        JLabel space = new JLabel("");
+        JLabel space1 = new JLabel("");
 
-        panel.setLayout(new GridLayout(6,2));
+        panel.setLayout(new GridLayout(7,2));
         panel.add(location);
         panel.add(textLocation);
         panel.add(price);
@@ -40,8 +49,10 @@ public class AddPanelHouse extends JFrame {
         panel.add(textArea);
         panel.add(saleType);
         panel.add(textSaleType);
+        panel.add(labelEstateType);
         panel.add(estateType);
-        panel.add(textEstateType);
+        panel.add(space);
+        panel.add(space1);
         panel.add(back);
         panel.add(add);
 
