@@ -146,12 +146,13 @@ public class RealEstate {
 		//return status;
 	}
 
-	public static Workplace[] WorkPlaceSearch(String sale_type){
+	public static Workplace[] WorkPlaceSearch(String sale_type, String realEstateType){
 		int status=0;
 		try{
 			Connection con=DB.getConnection();
-			PreparedStatement ps=con.prepareStatement("select id, saleType, price, area, location, realEstateType FROM estateTbl where saleType = ?");
+			PreparedStatement ps=con.prepareStatement("select id, saleType, price, area, location, realEstateType FROM estateTbl where saleType = ? AND realEstateType = ?");
 			ps.setString(1,sale_type);
+			ps.setString(2, realEstateType);
 			ResultSet rs = ps.executeQuery();
 
 			while(rs.next()){
@@ -162,7 +163,6 @@ public class RealEstate {
 				String saleType = rs.getString("saleType");
 				String area = rs.getString("area");
 				String location = rs.getString("location");
-				String realEstateType = rs.getString("realEstateType");
 				Workplace workplace = new Workplace(saleType,(int) price, Integer.parseInt(area), location, realEstateType);
 				arrWorkplace.add(workplace);
 			}
@@ -172,20 +172,21 @@ public class RealEstate {
 		}
 		catch(Exception e){System.out.println(e);
 		}
-		Workplace[] landWorkplace = new Workplace[arrLand.size()];
-		for (int i = 0; i<landWorkplace.length; ++i){
-			landWorkplace[i]  =  arrWorkplace.get(i);
+		Workplace[] WorkplaceArr = new Workplace[arrWorkplace.size()];
+		for (int i = 0; i<WorkplaceArr.length; ++i){
+			WorkplaceArr[i]  =  arrWorkplace.get(i);
 		}
-		return landWorkplace;
+		return WorkplaceArr;
 		//return status;
 	}
 
-	public static Land[] LandSearch(String sale_type){
+	public static Land[] LandSearch(String sale_type, String realEstateType){
 		int status=0;
 		try{
 			Connection con=DB.getConnection();
-			PreparedStatement ps=con.prepareStatement("select id, saleType, price, area, location, realEstateType FROM estateTbl where saleType = ?");
+			PreparedStatement ps=con.prepareStatement("select id, saleType, price, area, location, realEstateType FROM estateTbl where saleType = ? AND realEstateType = ?");
 			ps.setString(1,sale_type);
+			ps.setString(2, realEstateType);
 			ResultSet rs = ps.executeQuery();
 
 			while(rs.next()){
@@ -196,7 +197,6 @@ public class RealEstate {
 				String saleType = rs.getString("saleType");
 				String area = rs.getString("area");
 				String location = rs.getString("location");
-				String realEstateType = rs.getString("reaşEstateType");
 				Land land = new Land(saleType,(int) price, Integer.parseInt(area), location, realEstateType);
 				arrLand.add(land);
 			}
