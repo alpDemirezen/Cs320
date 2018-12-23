@@ -1,4 +1,4 @@
-public class workplace implements Sistem{
+public class workplace implements Sistem {
 
     public int id, price, area;
     public String saleType, realEstateType, location;
@@ -10,6 +10,7 @@ public class workplace implements Sistem{
         this.area = area;
         this.location = location;
         this.realEstateType = realEstateType;
+        add(saleType,price,area,location,realEstateType);
     }
 
     public int getArea() {
@@ -61,18 +62,18 @@ public class workplace implements Sistem{
 
 
     @Override
-    public void search(String saleType, int price, int area, String location, String realEstateType) {
-
+    public void search(String saleType, String realEstateType) {
+        RealEstate.search(saleType, realEstateType);
     }
 
     @Override
     public void add(String saleType, int price, int area, String location, String realEstateType) {
-
+        RealEstate.save(saleType, price, area, location, realEstateType);
     }
 
     @Override
     public void sell(int id) {
-
+        RealEstate.delete(id);
     }
 
     public String toString() {

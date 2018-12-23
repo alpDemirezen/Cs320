@@ -33,8 +33,6 @@ public class LoginPanel extends JFrame {
                     frame.dispose();
                     Operators operator = new Operators();
                     operator.initialize();
-
-
                 } else {
                     JOptionPane.showMessageDialog(null, "Log in failed!");
                 }

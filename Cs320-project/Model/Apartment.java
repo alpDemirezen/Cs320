@@ -6,27 +6,20 @@ public class Apartment extends House {
         super.area = area;
         super.location = location;
         super.realEstateType = realEstateType;
+        add(saleType,price,area,location,realEstateType);
     }
 
     public void add(String saleType, int price, int area, String location, String realEstateType) {
-        super.saleType = saleType;
-        super.price = price;
-        super.area=area;
-        super.location = location;
-        super.realEstateType = realEstateType;
+        RealEstate.save(saleType, price, area, location, realEstateType);
     }
 
-    public void search(String saleType, int price, int area, String location, String realEstateType) {
-        super.saleType = saleType;
-        super.price = price;
-        super.area = area;
-        super.location = location;
-        super.realEstateType = realEstateType;
+    public void search(String saleType, String realEstateType) {
+        RealEstate.search(saleType, realEstateType);
     }
 
 
-    public  void sell(int id) {
-        super.id = id;
+    public void sell(int id) {
+        RealEstate.delete(id);
     }
 
     public void setId(int Id) {

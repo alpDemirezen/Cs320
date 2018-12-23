@@ -10,6 +10,7 @@ public class Land implements Sistem {
         this.area = area;
         this.location = location;
         this.realEstateType = realEstateType;
+        add(saleType,price,area,location,realEstateType);
     }
 
     public int getArea() {
@@ -38,7 +39,6 @@ public class Land implements Sistem {
 
 
     public int getId() {
-        this.id = id;
         return id;
     }
 
@@ -48,18 +48,18 @@ public class Land implements Sistem {
 
 
     @Override
-    public void search(String saleType, int price, int area, String location, String realEstateType) {
-
+    public void search(String saleType, String realEstateType) {
+        RealEstate.search(saleType, realEstateType);
     }
 
     @Override
     public void add(String saleType, int price, int area, String location, String realEstateType) {
-
+        RealEstate.save(saleType,price,area,location,realEstateType);
     }
 
     @Override
     public void sell(int id) {
-
+        RealEstate.delete(id);
     }
 
     public String getType() {
