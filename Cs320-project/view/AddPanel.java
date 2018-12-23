@@ -23,6 +23,8 @@ public class AddPanel extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 frame.dispose();
                // model ve database sonrası eklenecek.
+                TypePanel types = new TypePanel();
+                types.initialize();
             }
 
         });

@@ -11,7 +11,19 @@ public class SearchType extends JFrame {
         JPanel spacePanel = new JPanel();
         JPanel spacePanel2 = new JPanel();
         JButton house = new JButton("HOUSE");
+        house.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent e) {
+                frame.dispose();
+                new SearchPanelHouse().initialize();
+            }
+        });
         JButton others = new JButton("OTHERS");
+        others.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent e) {
+                frame.dispose();
+                new SearchPanel().initialize();
+            }
+        });
         JButton back = new JButton("BACK");
         back.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e) {

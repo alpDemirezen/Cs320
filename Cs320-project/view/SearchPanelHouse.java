@@ -3,8 +3,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class AddPanelHouse extends JFrame {
-
+public class SearchPanelHouse extends JFrame {
     void initialize(){
         String[] saleTypes = {" ","For Sale","For Rent"};
         String[] estateTypes = {" ","Apartment","Villa"};
@@ -19,13 +18,11 @@ public class AddPanelHouse extends JFrame {
         JComboBox boxSaleType = new JComboBox(saleTypes);
         JLabel area = new JLabel("Area");
         JTextField textArea = new JTextField();
-        JButton add = new JButton("ADD");
+        JButton add = new JButton("SEARCH");
         add.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e) {
                 frame.dispose();
-               // database ve model sonrası eklenecek
-                TypePanel types = new TypePanel();
-                types.initialize();
+                // database ve model sonrası eklenecek
             }
 
         });
@@ -33,8 +30,7 @@ public class AddPanelHouse extends JFrame {
         back.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e) {
                 frame.dispose();
-                TypePanel types = new TypePanel();
-                types.initialize();
+               new SearchType().initialize();
             }
 
         });
