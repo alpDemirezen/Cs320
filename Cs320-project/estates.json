@@ -2,7 +2,7 @@
 	"apartment":[
 					{
 						"saleType": "rental",
-						"price": 100000,
+						"price": 180000,
 						"area": 170,
 						"location": "Istanbul"
 					},
@@ -18,21 +18,23 @@
 						"saleType": "rental",
 						"price": 100000,
 						"area": 170,
-						"location": "Istanbul"
+						"location": "Bursa"
 				},
 				{
 						"saleType": "rental",
 						"price": 100000,
 						"area": 170,
-						"location": "Istanbul"
+						"location": "Antalya"
 				}],
 	"land": [
 				{
+						"saleType": "for sale"
 						"price": 100000,
 						"area": 170,
 						"location": "Istanbul"
 				},
 				{
+						"saleType": "for sale"
 						"price": 200000,
 						"area": 150,
 						"location": "Izmir"
@@ -42,7 +44,7 @@
 						"saleType": "rental",
 						"price": 100000,
 						"area": 170,
-						"location": "Istanbul"
+						"location": "Edirne"
 					},
 					{
 						"saleType": "for sale",

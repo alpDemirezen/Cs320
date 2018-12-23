@@ -4,14 +4,14 @@ import java.sql.ResultSet;
 
 public class RealEstate {
 	
-	public static int save(String saleType, int price, int area, String location, String realEstateType){
+	public static int save(String saleType, long price, long area, String location, String realEstateType){
 		int status=0;
 		try{
 			Connection con=DB.getConnection();
 			PreparedStatement ps=con.prepareStatement("insert into estateTbl(saleType,price,area,location,realEstateType) values(?,?,?,?,?)");
 			ps.setString(1,saleType);
-			ps.setLong(2,price);
-			ps.setInt(3,area);
+			ps.setLong(2,price);		//int long yapıldı
+			ps.setLong(3,area);
 			ps.setString(4,location);
 			ps.setString(5,realEstateType);
 			status=ps.executeUpdate();
@@ -21,21 +21,36 @@ public class RealEstate {
 		}
 		return status;
 	}
-
-	public static void search(String sale_type, String realEstateType){
+/*	
+	public static int update(int id, String saleType, int price){
 		int status=0;
 		try{
 			Connection con=DB.getConnection();
-			PreparedStatement ps=con.prepareStatement("select id, saleType, price, area, location, realEstateType FROM estateTbl where saleType = ? AND realEstateType = ?");
+			PreparedStatement ps=con.prepareStatement("update estateTbl set saleType = ?, price = ? where id = ?");
+			ps.setLong(3,id);			//int long yapıldı
+			ps.setString(1,saleType);
+			ps.setLong(2,price);
+			status=ps.executeUpdate();
+			con.close();
+		}
+		catch(Exception e){System.out.println(e);
+		}
+		return status;
+	}
+*/	
+	public static void search(String sale_type){
+		int status=0;
+		try{
+			Connection con=DB.getConnection();
+			PreparedStatement ps=con.prepareStatement("select id, saleType, price, area, location, realEstateType FROM estateTbl where saleType = ?");
 			ps.setString(1,sale_type);
-			ps.setString(2, realEstateType);
 			ResultSet rs = ps.executeQuery();
 			
 		      while(rs.next()){
 		    	  
 		          //Retrieve by column name
 		          int id  = rs.getInt("id");
-		          int price = rs.getInt("price");
+		          long price = rs.getInt("price");						//int long yapıldı
 		          String saleType = rs.getString("saleType");
 		          String area = rs.getString("area");
 		          String location = rs.getString("location");
