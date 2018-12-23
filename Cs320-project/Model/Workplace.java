@@ -1,15 +1,16 @@
-public class Workplace implements Sistem{
+public class workplace implements Sistem {
 
     public int id, price, area;
     public String saleType, realEstateType, location;
 
 
-    public Workplace(String saleType, int price, int area, String location, String realEstateType) {
+    public workplace(String saleType, int price, int area, String location, String realEstateType) {
         this.saleType = saleType;
         this.price = price;
         this.area = area;
         this.location = location;
         this.realEstateType = realEstateType;
+        add(saleType,price,area,location,realEstateType);
     }
 
     public int getArea() {
@@ -61,23 +62,23 @@ public class Workplace implements Sistem{
 
 
     @Override
-    public void search(String saleType, int price, int area, String location, String realEstateType) {
-
+    public void search(String saleType, String realEstateType) {
+        RealEstate.search(saleType, realEstateType);
     }
 
     @Override
     public void add(String saleType, int price, int area, String location, String realEstateType) {
-
+        RealEstate.save(saleType, price, area, location, realEstateType);
     }
 
     @Override
     public void sell(int id) {
-
+        RealEstate.delete(id);
     }
 
     public String toString() {
-        return ("Sale Type Of The Workplace: " + this.saleType + "\n" + "Price Of The Workplace: " + this.price +
-                "\n" + "Area Of The Workplace: " + this.area + "\n" + "Location Of The Workplace " + this.location + "\n");
+        return ("Sale Type Of The workplace: " + this.saleType + "\n" + "Price Of The workplace: " + this.price +
+                "\n" + "Area Of The workplace: " + this.area + "\n" + "Location Of The workplace " + this.location + "\n");
     }
 
 }

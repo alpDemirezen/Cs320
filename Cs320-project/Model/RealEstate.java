@@ -22,12 +22,13 @@ public class RealEstate {
 		return status;
 	}
 
-	public static void search(String sale_type){
+	public static void search(String sale_type, String realEstateType){
 		int status=0;
 		try{
 			Connection con=DB.getConnection();
-			PreparedStatement ps=con.prepareStatement("select id, saleType, price, area, location, realEstateType FROM estateTbl where saleType = ?");
+			PreparedStatement ps=con.prepareStatement("select id, saleType, price, area, location, realEstateType FROM estateTbl where saleType = ? AND realEstateType = ?");
 			ps.setString(1,sale_type);
+			ps.setString(2, realEstateType);
 			ResultSet rs = ps.executeQuery();
 			
 		      while(rs.next()){
