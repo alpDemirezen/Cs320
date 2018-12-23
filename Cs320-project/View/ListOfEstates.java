@@ -23,6 +23,7 @@ public class ListOfEstates extends JFrame {
         Apartment[] result = RealEstate.ApartmentSearch(saleType,estateType);
         for(int i = 0; i<result.length; ++i){
             model.addRow(new Object[]{result[i].getId(), result[i].getType(), result[i].getLocation(),result[i].area,result[i].price, result[i].saleType});
+
         }
 
         table.setFillsViewportHeight(true);
