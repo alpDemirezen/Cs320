@@ -18,8 +18,8 @@ public class SearchPanelHouse extends JFrame {
         JComboBox boxSaleType = new JComboBox(saleTypes);
         JLabel area = new JLabel("Area");
         JTextField textArea = new JTextField();
-        JButton add = new JButton("SEARCH");
-        add.addActionListener(new ActionListener(){
+        JButton search = new JButton("SEARCH");
+        search.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e) {
                 frame.dispose();
                 // database ve model sonrası eklenecek
@@ -53,7 +53,7 @@ public class SearchPanelHouse extends JFrame {
         panel.add(space);
         panel.add(space1);
         panel.add(back);
-        panel.add(add);
+        panel.add(search);
 
         frame.setSize(700,400);
         frame.getContentPane().add(panel,BorderLayout.CENTER);
