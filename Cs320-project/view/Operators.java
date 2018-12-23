@@ -68,6 +68,9 @@ public class Operators extends JFrame {
 
         operatorsFrame.setSize(500,200);
         operatorsFrame.add(buttonPanel);
+        Toolkit toolkit = Toolkit.getDefaultToolkit();
+        Dimension size = toolkit.getScreenSize();
+        operatorsFrame.setLocation(size.width/2 - operatorsFrame.getWidth()/2, size.height/2 - operatorsFrame.getHeight()/2);
         operatorsFrame.setVisible(true);
 
     }

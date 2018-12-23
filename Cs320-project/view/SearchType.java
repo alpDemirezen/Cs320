@@ -46,6 +46,9 @@ public class SearchType extends JFrame {
         frame.add(spacePanel);
         frame.add(buttonPanel);
         frame.add(spacePanel2);
+        Toolkit toolkit = Toolkit.getDefaultToolkit();
+        Dimension size = toolkit.getScreenSize();
+        frame.setLocation(size.width/2 - frame.getWidth()/2, size.height/2 - frame.getHeight()/2);
         frame.setVisible(true);
 
     }
