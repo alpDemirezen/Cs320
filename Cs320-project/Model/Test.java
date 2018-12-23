@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 public class Test {
 	
 	
@@ -29,7 +27,7 @@ public class Test {
     	if ( i!= 0)
     		System.out.println("successfully updated");	   	
  */   	
-    	RealEstate.search("*");
+    	RealEstate.search("rental");
 	
 
     }
