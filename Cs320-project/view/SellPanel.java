@@ -5,11 +5,14 @@ import java.awt.event.ActionListener;
 
 public class SellPanel extends JFrame {
     void initialize(){
+        String[] types = {" ","For Sale","For Rent"};
         JFrame frame = new JFrame();
         frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
         JPanel panel = new JPanel();
         JLabel id = new JLabel("ID");
         JTextField textID = new JTextField();
+        JLabel labelSaleType = new JLabel("Sale Type");
+        JComboBox saleType = new JComboBox(types);
         JButton sell = new JButton("SELL");
         sell.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e) {
@@ -29,14 +32,15 @@ public class SellPanel extends JFrame {
         JLabel space4 = new JLabel("");
 
 
-        panel.setLayout(new GridLayout(3,3));
+        panel.setLayout(new GridLayout(4,2));
         panel.add(id);
         panel.add(textID);
-        panel.add(sell);
-        panel.add(space2);
+        panel.add(labelSaleType);
+        panel.add(saleType);
         panel.add(space3);
         panel.add(space4);
         panel.add(back);
+        panel.add(sell);
 
 
         frame.setSize(390,180);

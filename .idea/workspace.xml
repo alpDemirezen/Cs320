@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="637f3298-8d61-4cd2-9433-f9c648e1bbe3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Cs320-project/view/SellPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cs320-project/view/Operators.java" beforeDir="false" afterPath="$PROJECT_DIR$/Cs320-project/view/Operators.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cs320-project/view/SearchPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/Cs320-project/view/SearchPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cs320-project/view/SearchPanelHouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Cs320-project/view/SearchPanelHouse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cs320-project/view/SellPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/Cs320-project/view/SellPanel.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="C:\Users\ahmet\IdeaProjects\Cs320\.idea\shelf/" />
@@ -105,7 +102,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Cs320-project/view/Operators.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="199">
@@ -117,11 +114,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Cs320-project/view/SellPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="335">
-              <caret line="38" column="24" lean-forward="true" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="24" />
+            <state relative-caret-position="204">
+              <caret line="15" column="43" lean-forward="true" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -180,8 +177,8 @@
         <option value="$PROJECT_DIR$/Cs320-project/view/AddPanel.java" />
         <option value="$PROJECT_DIR$/Cs320-project/view/SearchPanel.java" />
         <option value="$PROJECT_DIR$/Cs320-project/view/SearchPanelHouse.java" />
-        <option value="$PROJECT_DIR$/Cs320-project/view/SellPanel.java" />
         <option value="$PROJECT_DIR$/Cs320-project/view/Operators.java" />
+        <option value="$PROJECT_DIR$/Cs320-project/view/SellPanel.java" />
       </list>
     </option>
   </component>
@@ -233,7 +230,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545567317152" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545567684329" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
@@ -425,7 +422,14 @@
       <option name="project" value="LOCAL" />
       <updated>1545562585731</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Sell is added as operator.">
+      <created>1545567336579</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1545567336579</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -483,7 +487,8 @@
     <MESSAGE value="ID Search is added.(Gui)" />
     <MESSAGE value="ComboBoxes for AddPanels." />
     <MESSAGE value="Search Panels are added." />
-    <option name="LAST_COMMIT_MESSAGE" value="Search Panels are added." />
+    <MESSAGE value="Sell is added as operator." />
+    <option name="LAST_COMMIT_MESSAGE" value="Sell is added as operator." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Cs320-project/model/System.java" />
@@ -655,16 +660,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Cs320-project/view/SellPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="38" column="24" lean-forward="true" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Cs320-project/view/TypePanel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -679,6 +674,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="199">
           <caret line="50" column="36" lean-forward="true" selection-start-line="50" selection-start-column="36" selection-end-line="50" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cs320-project/view/SellPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="15" column="43" lean-forward="true" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
