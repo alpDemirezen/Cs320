@@ -32,6 +32,7 @@ public class ListOfEstates extends JFrame {
                 Villa[] result = RealEstate.VillaSearch(saleType, estateType);
                 for (Villa villa : result) {
                     model.addRow(new Object[]{villa.getId(), villa.getType(), villa.location, villa.area, villa.price, villa.saleType});
+
                 }
 
                 break;
