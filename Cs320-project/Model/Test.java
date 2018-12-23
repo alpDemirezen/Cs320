@@ -2,12 +2,8 @@ public class Test {
 	
 	
     public static void main(String args[]){
-    	    	
-    	
-    	
-    	
-    	
-    	
+
+
     	//DatabaseManager dbman = new DatabaseManager();
 
     	//insert elements (estates.json tablosunda okuduklarını insert eder
