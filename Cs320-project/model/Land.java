@@ -66,11 +66,6 @@ public class Land implements Sistem {
         return realEstateType;
     }
 
-    public void printLand(){
-        System.out.println("Price Of The Land: " + this.price +
-                "\n" + "Area Of The Land: " + this.area + "\n" + "Location Of The Land " + this.location + "\n");
-    }
-
     public String toString() {
         return ("Price Of The Land: " + this.price +
                 "\n" + "Area Of The Land: " + this.area + "\n" + "Location Of The Land " + this.location + "\n");

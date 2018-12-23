@@ -42,11 +42,6 @@ public class Apartment extends House {
         return realEstateType;
     }
 
-    public void printHouse(){
-        System.out.println("Sale Type Of The Apartment: " + this.saleType + "\n" + "Price Of The Apartment: " + this.price +
-                "\n" + "Area Of The Apartment: " + this.area + "\n" + "Location Of The Apartment " + this.location + "\n");
-    }
-
     public String toString() {
         return ("Sale Type Of The Apartment: " + this.saleType + "\n" + "Price Of The Apartment: " + this.price +
                 "\n" + "Area Of The Apartment: " + this.area + "\n" + "Location Of The Apartment " + this.location + "\n");
