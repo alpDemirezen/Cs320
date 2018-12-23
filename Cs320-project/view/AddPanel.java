@@ -6,7 +6,7 @@ import java.awt.event.ActionListener;
 public class AddPanel extends JFrame {
 
     void initialize(){
-
+        String[] saleTypes = {" ","For Sale","For Rent"};
         JFrame frame = new JFrame();
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         JPanel panel = new JPanel();
@@ -15,7 +15,7 @@ public class AddPanel extends JFrame {
         JLabel location = new JLabel("Location");
         JTextField textLocation = new JTextField();
         JLabel saleType = new JLabel("Sale Type");
-        JTextField textSaleType = new JTextField();
+        JComboBox boxSaleType = new JComboBox(saleTypes);
         JLabel area = new JLabel("Area");
         JTextField textArea = new JTextField();
         JButton add = new JButton("ADD");
@@ -35,8 +35,10 @@ public class AddPanel extends JFrame {
             }
 
         });
+        JLabel space = new JLabel(" ");
+        JLabel space1 = new JLabel(" ");
 
-        panel.setLayout(new GridLayout(5,2));
+        panel.setLayout(new GridLayout(6,2));
         panel.add(location);
         panel.add(textLocation);
         panel.add(price);
@@ -44,7 +46,9 @@ public class AddPanel extends JFrame {
         panel.add(area);
         panel.add(textArea);
         panel.add(saleType);
-        panel.add(textSaleType);
+        panel.add(boxSaleType);
+        panel.add(space);
+        panel.add(space1);
         panel.add(back);
         panel.add(add);
 

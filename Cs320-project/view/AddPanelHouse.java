@@ -6,7 +6,8 @@ import java.awt.event.ActionListener;
 public class AddPanelHouse extends JFrame {
 
     void initialize(){
-        String[] types = {"For Sale","For Rent"};
+        String[] saleTypes = {" ","For Sale","For Rent"};
+        String[] estateTypes = {" ","Apartment","Villa"};
         JFrame frame = new JFrame();
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         JPanel panel = new JPanel();
@@ -15,7 +16,7 @@ public class AddPanelHouse extends JFrame {
         JLabel location = new JLabel("Location");
         JTextField textLocation = new JTextField();
         JLabel saleType = new JLabel("Sale Type");
-        JTextField textSaleType = new JTextField();
+        JComboBox boxSaleType = new JComboBox(saleTypes);
         JLabel area = new JLabel("Area");
         JTextField textArea = new JTextField();
         JButton add = new JButton("ADD");
@@ -35,7 +36,7 @@ public class AddPanelHouse extends JFrame {
             }
 
         });
-        JComboBox estateType = new JComboBox(types);
+        JComboBox estateType = new JComboBox(estateTypes);
         JLabel labelEstateType = new JLabel("Estate Type");
         JLabel space = new JLabel("");
         JLabel space1 = new JLabel("");
@@ -48,7 +49,7 @@ public class AddPanelHouse extends JFrame {
         panel.add(area);
         panel.add(textArea);
         panel.add(saleType);
-        panel.add(textSaleType);
+        panel.add(boxSaleType);
         panel.add(labelEstateType);
         panel.add(estateType);
         panel.add(space);
