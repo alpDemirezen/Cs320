@@ -13,7 +13,7 @@ public class Main {
 
         Workplace alp = new Workplace("For Rent", 600000, 180, "Cekmekoy", "Workplace");
 
-        Land ahmet= new Land("For Sale", 500000,1000000,"tasdelen", "Land");
+        Land ahmet = new Land("For Sale", 500000,1000000,"tasdelen", "Land");
 
         houses.add(ege);
         houses.add(dede);

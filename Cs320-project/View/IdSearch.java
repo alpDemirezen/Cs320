@@ -1,7 +1,5 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class IdSearch extends JFrame {
     void initialize(){
@@ -11,19 +9,15 @@ public class IdSearch extends JFrame {
         JLabel id = new JLabel("ID");
         JTextField textID = new JTextField();
         JButton search = new JButton("SEARCH");
-        search.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e) {
-                frame.dispose();
-                // model ve databaseten sonra search eklenecek
-            }
+        search.addActionListener(e -> {
+            frame.dispose();
+            // model ve databaseten sonra search eklenecek
         });
         JButton back = new JButton("BACK");
-        back.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e) {
-                frame.dispose();
-                TypesOfSearch typesOfSearch = new TypesOfSearch();
-                typesOfSearch.initialize();
-            }
+        back.addActionListener(e -> {
+            frame.dispose();
+            TypesOfSearch typesOfSearch = new TypesOfSearch();
+            typesOfSearch.initialize();
         });
         JLabel space2 = new JLabel("");
         JLabel space3 = new JLabel("");

@@ -1,7 +1,5 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class TypesOfSearch extends JFrame {
     void initialize(){
@@ -11,26 +9,20 @@ public class TypesOfSearch extends JFrame {
         JPanel spacePanel = new JPanel();
         JPanel spacePanel2 = new JPanel();
         JButton idSearch = new JButton("ID SEARCH");
-        idSearch.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e) {
-                frame.dispose();
-                new IdSearch().initialize();
-            }
+        idSearch.addActionListener(e -> {
+            frame.dispose();
+            new IdSearch().initialize();
         });
         JButton search = new JButton("SEARCH");
-        search.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e) {
-                frame.dispose();
-               SearchType search = new SearchType();
-               search.initialize();
-            }
+        search.addActionListener(e -> {
+            frame.dispose();
+           SearchType search1 = new SearchType();
+           search1.initialize();
         });
         JButton back = new JButton("BACK");
-        back.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e) {
-                frame.dispose();
-                new Operators().initialize();
-            }
+        back.addActionListener(e -> {
+            frame.dispose();
+            new Operators().initialize();
         });
         JLabel space = new JLabel("");
 

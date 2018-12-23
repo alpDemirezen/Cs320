@@ -25,12 +25,10 @@ public class SearchType extends JFrame {
             }
         });
         JButton back = new JButton("BACK");
-        back.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e) {
-                frame.dispose();
-                TypesOfSearch typesOfSearch = new TypesOfSearch();
-                typesOfSearch.initialize();
-            }
+        back.addActionListener(e -> {
+            frame.dispose();
+            TypesOfSearch typesOfSearch = new TypesOfSearch();
+            typesOfSearch.initialize();
         });
         JLabel space = new JLabel("");
 
