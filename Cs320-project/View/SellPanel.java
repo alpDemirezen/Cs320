@@ -27,12 +27,11 @@ public class SellPanel extends JFrame {
                 new Operators().initialize();
             }
         });
-        JLabel space2 = new JLabel("");
         JLabel space3 = new JLabel("");
         JLabel space4 = new JLabel("");
 
 
-        panel.setLayout(new GridLayout(4,2));
+        panel.setLayout(new GridLayout(3,2));
         panel.add(id);
         panel.add(textID);
         panel.add(space3);

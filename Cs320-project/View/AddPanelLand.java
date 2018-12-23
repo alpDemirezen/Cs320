@@ -43,9 +43,11 @@ public class AddPanelLand {
             }
 
         });
+        JLabel space = new JLabel(" ");
+        JLabel space1 = new JLabel(" ");
 
 
-        panel.setLayout(new GridLayout(7,2));
+        panel.setLayout(new GridLayout(6,2));
         panel.add(location);
         panel.add(textLocation);
         panel.add(price);
@@ -54,6 +56,8 @@ public class AddPanelLand {
         panel.add(textArea);
         panel.add(saleType);
         panel.add(boxSaleType);
+        panel.add(space);
+        panel.add(space1);
         panel.add(back);
         panel.add(add);
 
