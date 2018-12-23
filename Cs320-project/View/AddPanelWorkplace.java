@@ -23,9 +23,9 @@ public class AddPanelWorkplace {
             public void actionPerformed(ActionEvent e) {
                 frame.dispose();
                 if(boxSaleType.getSelectedItem().equals("For Rent")){
-                    workplace wp = new workplace("For Rent", Integer.parseInt(textPrice.getText()), Integer.parseInt(textArea.getText()), textLocation.getText(), "Workplace");
+                    Workplace wp = new Workplace("For Rent", Integer.parseInt(textPrice.getText()), Integer.parseInt(textArea.getText()), textLocation.getText(), "Workplace");
                 } else if (boxSaleType.getSelectedItem().equals("For Sale")){
-                    workplace wp = new workplace("For Sale", Integer.parseInt(textPrice.getText()), Integer.parseInt(textArea.getText()), textLocation.getText(), "Workplace");
+                    Workplace wp = new Workplace("For Sale", Integer.parseInt(textPrice.getText()), Integer.parseInt(textArea.getText()), textLocation.getText(), "Workplace");
                 }
                 TypePanel types = new TypePanel();
                 types.initialize();

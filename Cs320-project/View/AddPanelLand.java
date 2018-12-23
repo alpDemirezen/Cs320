@@ -6,6 +6,8 @@ import java.awt.event.ActionListener;
 public class AddPanelLand {
 
     void initialize(){
+
+
         String[] saleTypes = {" ","For Sale","For Rent"};
         JFrame frame = new JFrame();
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
