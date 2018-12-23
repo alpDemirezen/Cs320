@@ -21,7 +21,7 @@ public class TypePanel extends JFrame {
         land.addActionListener(new ActionListener(){
         public void actionPerformed(ActionEvent e) {
             frame.dispose();
-            AddPanel addPanel = new AddPanel();
+            AddPanelLand addPanel = new AddPanelLand();
             addPanel.initialize();
         }
     });
@@ -29,7 +29,7 @@ public class TypePanel extends JFrame {
         workplace.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e) {
                 frame.dispose();
-                AddPanel addPanel = new AddPanel();
+                AddPanelWorkplace addPanel = new AddPanelWorkplace();
                 addPanel.initialize();
             }
         });

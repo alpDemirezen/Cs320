@@ -3,11 +3,10 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class AddPanelHouse extends JFrame {
+public class AddPanelWorkplace {
 
     void initialize(){
         String[] saleTypes = {" ","For Sale","For Rent"};
-        String[] estateTypes = {" ","Apartment","Villa"};
         JFrame frame = new JFrame();
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         JPanel panel = new JPanel();
@@ -20,18 +19,13 @@ public class AddPanelHouse extends JFrame {
         JLabel area = new JLabel("Area");
         JTextField textArea = new JTextField();
         JButton add = new JButton("ADD");
-        JComboBox estateType = new JComboBox(estateTypes);
         add.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e) {
                 frame.dispose();
-                if(estateType.getSelectedItem().equals("Apartment") && boxSaleType.getSelectedItem().equals("For Rent")){
-                    Apartment apartment = new Apartment("For Rent", Integer.parseInt(textPrice.getText()), Integer.parseInt(textArea.getText()), textLocation.getText(), "Apartment");
-                } else if (estateType.getSelectedItem().equals("Apartment") && boxSaleType.getSelectedItem().equals("For Sale")){
-                    Apartment apartment = new Apartment("For Sale", Integer.parseInt(textPrice.getText()), Integer.parseInt(textArea.getText()), textLocation.getText(), "Apartment");
-                } else if (estateType.getSelectedItem().equals("Villa") && boxSaleType.getSelectedItem().equals("For Rent")){
-                    Villa villa = new Villa("For Rent", Integer.parseInt(textPrice.getText()), Integer.parseInt(textArea.getText()), textLocation.getText(), "Villa");
-                } else if(estateType.getSelectedItem().equals("Villa") && boxSaleType.getSelectedItem().equals("For Sale")){
-                    Villa villa = new Villa("For Sale", Integer.parseInt(textPrice.getText()), Integer.parseInt(textArea.getText()), textLocation.getText(), "Villa");
+                if(boxSaleType.getSelectedItem().equals("For Rent")){
+                    workplace wp = new workplace("For Rent", Integer.parseInt(textPrice.getText()), Integer.parseInt(textArea.getText()), textLocation.getText(), "Workplace");
+                } else if (boxSaleType.getSelectedItem().equals("For Sale")){
+                    workplace wp = new workplace("For Sale", Integer.parseInt(textPrice.getText()), Integer.parseInt(textArea.getText()), textLocation.getText(), "Workplace");
                 }
                 TypePanel types = new TypePanel();
                 types.initialize();
@@ -48,9 +42,6 @@ public class AddPanelHouse extends JFrame {
 
         });
 
-        JLabel labelEstateType = new JLabel("Estate Type");
-        JLabel space = new JLabel("");
-        JLabel space1 = new JLabel("");
 
         panel.setLayout(new GridLayout(7,2));
         panel.add(location);
@@ -61,10 +52,6 @@ public class AddPanelHouse extends JFrame {
         panel.add(textArea);
         panel.add(saleType);
         panel.add(boxSaleType);
-        panel.add(labelEstateType);
-        panel.add(estateType);
-        panel.add(space);
-        panel.add(space1);
         panel.add(back);
         panel.add(add);
 
@@ -75,5 +62,6 @@ public class AddPanelHouse extends JFrame {
         frame.setLocation(size.width/2 - frame.getWidth()/2, size.height/2 - frame.getHeight()/2);
         frame.setVisible(true);
     }
-}
 
+
+}

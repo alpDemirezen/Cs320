@@ -20,7 +20,6 @@ public class Test {
     	//	System.out.println("successfully deleted");
 
 
-
     	//RealEstate.search("For Rent", "Apartment");
 	
 
