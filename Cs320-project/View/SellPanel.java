@@ -11,13 +11,13 @@ public class SellPanel extends JFrame {
         JPanel panel = new JPanel();
         JLabel id = new JLabel("ID");
         JTextField textID = new JTextField();
-        JLabel labelSaleType = new JLabel("Sale Type");
-        JComboBox saleType = new JComboBox(types);
         JButton sell = new JButton("SELL");
         sell.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e) {
                 frame.dispose();
-                // model ve databaseten sonra sell eklenecek
+                RealEstate.delete(Integer.parseInt(textID.getText()));
+                Operators op = new Operators();
+                op.initialize();
             }
         });
         JButton back = new JButton("BACK");
@@ -35,8 +35,6 @@ public class SellPanel extends JFrame {
         panel.setLayout(new GridLayout(4,2));
         panel.add(id);
         panel.add(textID);
-        panel.add(labelSaleType);
-        panel.add(saleType);
         panel.add(space3);
         panel.add(space4);
         panel.add(back);
