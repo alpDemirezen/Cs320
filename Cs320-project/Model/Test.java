@@ -29,8 +29,7 @@ public class Test {
 /*    	i=RealEstate.update(7, "rental", 120);
     	if ( i!= 0)
     		System.out.println("successfully updated");	   	
+<<<<<<< HEAD
  */
-	
-
     }
 }
