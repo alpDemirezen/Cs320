@@ -32,8 +32,7 @@ public class Operators extends JFrame {
         searchButton.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e) {
                 operatorsFrame.dispose();
-               TypesOfSearch search = new TypesOfSearch();
-               search.initialize();
+               new RealSearchPanel().initialize();
             }
 
         });
