@@ -81,6 +81,7 @@ public class RealEstate {
     public static Apartment[] ApartmentSearch(String sale_type , String realEstateType){
         int status=0;
         try{
+
             Connection con=DB.getConnection();
             PreparedStatement ps=con.prepareStatement("select id, saleType, price, area, location, realEstateType FROM estateTbl where saleType = ? AND realEstateType =?");
             ps.setString(1,sale_type);
@@ -108,6 +109,10 @@ public class RealEstate {
         for (int i = 0; i<apArr.length; ++i){
            apArr[i]  =  arrApart.get(i);
         }
+        for (int i = arrApart.size() - 1 ; i > -1 ; i--){
+        	arrApart.remove(i);
+		}
+
         return apArr;
         //return status;
     }
@@ -142,6 +147,10 @@ public class RealEstate {
 		for (int i = 0; i<vilArr.length; ++i){
 			vilArr[i]  =  arrVilla.get(i);
 		}
+		for (int i = arrVilla.size() - 1 ; i > -1 ; i--){
+			arrVilla.remove(i);
+		}
+
 		return vilArr;
 		//return status;
 	}
@@ -176,6 +185,10 @@ public class RealEstate {
 		for (int i = 0; i<WorkplaceArr.length; ++i){
 			WorkplaceArr[i]  =  arrWorkplace.get(i);
 		}
+		for (int i = arrWorkplace.size() - 1 ; i > -1 ; i--){
+			arrWorkplace.remove(i);
+		}
+
 		return WorkplaceArr;
 		//return status;
 	}
@@ -210,6 +223,10 @@ public class RealEstate {
 		for (int i = 0; i<landArr.length; ++i){
 			landArr[i]  =  arrLand.get(i);
 		}
+		for (int i = arrLand.size() - 1 ; i > -1 ; i--){
+			arrLand.remove(i);
+		}
+
 		return landArr;
 		//return status;
 	}
