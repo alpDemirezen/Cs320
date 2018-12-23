@@ -1,10 +1,10 @@
-public class workplace implements Sistem{
+public class Workplace implements Sistem{
 
     public int id, price, area;
     public String saleType, realEstateType, location;
 
 
-    public workplace(String saleType, int price, int area, String location, String realEstateType) {
+    public Workplace(String saleType, int price, int area, String location, String realEstateType) {
         this.saleType = saleType;
         this.price = price;
         this.area = area;
@@ -76,8 +76,8 @@ public class workplace implements Sistem{
     }
 
     public String toString() {
-        return ("Sale Type Of The workplace: " + this.saleType + "\n" + "Price Of The workplace: " + this.price +
-                "\n" + "Area Of The workplace: " + this.area + "\n" + "Location Of The workplace " + this.location + "\n");
+        return ("Sale Type Of The Workplace: " + this.saleType + "\n" + "Price Of The Workplace: " + this.price +
+                "\n" + "Area Of The Workplace: " + this.area + "\n" + "Location Of The Workplace " + this.location + "\n");
     }
 
 }

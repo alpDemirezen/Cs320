@@ -1,4 +1,4 @@
-public class view {
+public class View {
 
 
 }

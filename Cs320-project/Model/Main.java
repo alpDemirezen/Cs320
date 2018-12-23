@@ -4,14 +4,14 @@ public class Main {
     public static void main(String args[]){
 
         ArrayList<House> houses = new ArrayList<House>();
-        ArrayList<workplace> workplaces = new ArrayList<workplace>();
+        ArrayList<Workplace> workplaces = new ArrayList<Workplace>();
         ArrayList<Land> lands = new ArrayList<Land>();
 
         Apartment ege = new Apartment("For Sale", 600000, 180, "Cekmekoy", "Apartment");
 
         Villa dede = new Villa("For Sale", 600000, 180, "Cekmekoy", "Villa");
 
-        workplace alp = new workplace("For Rent", 600000, 180, "Cekmekoy", "Workplace");
+        Workplace alp = new Workplace("For Rent", 600000, 180, "Cekmekoy", "Workplace");
 
         Land ahmet= new Land("For Sale", 500000,1000000,"tasdelen", "Land");
 
@@ -58,7 +58,7 @@ public class Main {
         int price3 = 600000;
         int area3 = 180;
         String location3 = "cekmekoy";
-        String realEstateType3 = "workplace";
+        String realEstateType3 = "Workplace";
         for(int i = 0; i < lands.size(); i++) {
             if(workplaces.get(i).saleType.equalsIgnoreCase(saleType3) && workplaces.get(i).price == price3 &&
                     workplaces.get(i).area == area3 && workplaces.get(i).location.equalsIgnoreCase(location3) &&
