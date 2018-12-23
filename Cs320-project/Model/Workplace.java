@@ -51,7 +51,6 @@ public class Workplace implements Sistem {
 
 
     public int getId() {
-        this.id = id;
         return id;
     }
 

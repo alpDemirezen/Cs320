@@ -16,9 +16,9 @@ public class Test {
     	
     	//delete
 
-			i=RealEstate.delete(6);
+			//i=RealEstate.delete(6);
 
-
+		RealEstate.search("For Sale", "Apartment");
     	if ( i!= 0)
     		System.out.println("successfully deleted");	
     	

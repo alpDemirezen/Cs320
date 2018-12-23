@@ -32,7 +32,6 @@ public class Villa extends House {
     }
 
     public int getId() {
-        this.id = id;
         return id;
     }
 

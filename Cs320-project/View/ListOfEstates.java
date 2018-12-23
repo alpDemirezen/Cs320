@@ -23,7 +23,7 @@ public class ListOfEstates extends JFrame {
             case "Apartment": {
                 Apartment[] result = RealEstate.ApartmentSearch(saleType, estateType);
                 for (Apartment apartment : result) {
-                    model.addRow(new Object[]{apartment.getId(), apartment.getType(), apartment.getLocation(), apartment.area, apartment.price, apartment.saleType});
+                    model.addRow(new Object[]{apartment.id, apartment.getType(), apartment.getLocation(), apartment.area, apartment.price, apartment.saleType});
                 }
 
                 break;
