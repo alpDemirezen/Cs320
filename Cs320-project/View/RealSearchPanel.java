@@ -28,6 +28,10 @@ public class RealSearchPanel extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 frame.dispose();
                 // model ve database'e göre şekillenecek.
+                String saleType = saleTypes.getSelectedItem().toString();
+                String estateType = estateTypes.getSelectedItem().toString();
+                new ListOfEstates().initialize(estateType,saleType);
+
             }
         });
         JLabel space = new JLabel(" ");
