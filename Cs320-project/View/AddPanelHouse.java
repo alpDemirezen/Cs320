@@ -24,14 +24,15 @@ public class AddPanelHouse extends JFrame {
         add.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e) {
                 frame.dispose();
+
                 if(estateType.getSelectedItem().equals("Apartment") && boxSaleType.getSelectedItem().equals("For Rent")){
-                    Apartment apartment = new Apartment("For Rent", Integer.parseInt(textPrice.getText()), Integer.parseInt(textArea.getText()), textLocation.getText(), "Apartment");
+                   RealEstate.save("For Rent", Integer.parseInt(textPrice.getText()), Integer.parseInt(textArea.getText()), textLocation.getText(), "Apartment");
                 } else if (estateType.getSelectedItem().equals("Apartment") && boxSaleType.getSelectedItem().equals("For Sale")){
-                    Apartment apartment = new Apartment("For Sale", Integer.parseInt(textPrice.getText()), Integer.parseInt(textArea.getText()), textLocation.getText(), "Apartment");
+                    RealEstate.save("For Sale", Integer.parseInt(textPrice.getText()), Integer.parseInt(textArea.getText()), textLocation.getText(), "Apartment");
                 } else if (estateType.getSelectedItem().equals("Villa") && boxSaleType.getSelectedItem().equals("For Rent")){
-                    Villa villa = new Villa("For Rent", Integer.parseInt(textPrice.getText()), Integer.parseInt(textArea.getText()), textLocation.getText(), "Villa");
+                    RealEstate.save("For Rent", Integer.parseInt(textPrice.getText()), Integer.parseInt(textArea.getText()), textLocation.getText(), "Villa");
                 } else if(estateType.getSelectedItem().equals("Villa") && boxSaleType.getSelectedItem().equals("For Sale")){
-                    Villa villa = new Villa("For Sale", Integer.parseInt(textPrice.getText()), Integer.parseInt(textArea.getText()), textLocation.getText(), "Villa");
+                    RealEstate.save("For Sale", Integer.parseInt(textPrice.getText()), Integer.parseInt(textArea.getText()), textLocation.getText(), "Villa");
                 }
                 TypePanel types = new TypePanel();
                 types.initialize();

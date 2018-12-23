@@ -25,9 +25,9 @@ public class AddPanelLand {
             public void actionPerformed(ActionEvent e) {
                 frame.dispose();
                 if(boxSaleType.getSelectedItem().equals("For Rent")){
-                    Land land = new Land("For Rent", Integer.parseInt(textPrice.getText()), Integer.parseInt(textArea.getText()), textLocation.getText(), "Land");
+                    RealEstate.save("For Rent", Integer.parseInt(textPrice.getText()), Integer.parseInt(textArea.getText()), textLocation.getText(), "Land");
                 } else if (boxSaleType.getSelectedItem().equals("For Sale")){
-                    Land Land = new Land("For Sale", Integer.parseInt(textPrice.getText()), Integer.parseInt(textArea.getText()), textLocation.getText(), "Land");
+                    RealEstate.save("For Sale", Integer.parseInt(textPrice.getText()), Integer.parseInt(textArea.getText()), textLocation.getText(), "Land");
                 }
                 TypePanel types = new TypePanel();
                 types.initialize();

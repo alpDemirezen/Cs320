@@ -6,7 +6,6 @@ public class Apartment extends House {
         super.area = area;
         super.location = location;
         super.realEstateType = realEstateType;
-        add(saleType,price,area,location,realEstateType);
     }
 
     public void add(String saleType, int price, int area, String location, String realEstateType) {
@@ -27,9 +26,13 @@ public class Apartment extends House {
     }
 
     public int getId() {
-        this.id = id;
         return id;
     }
+
+    public String getLocation(){
+        return location;
+    }
+
 
     public String getType() {
         return realEstateType;

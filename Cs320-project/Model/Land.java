@@ -10,7 +10,6 @@ public class Land implements Sistem {
         this.area = area;
         this.location = location;
         this.realEstateType = realEstateType;
-        add(saleType,price,area,location,realEstateType);
     }
 
     public int getArea() {

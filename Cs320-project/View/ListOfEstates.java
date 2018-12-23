@@ -1,4 +1,5 @@
 import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -9,10 +10,21 @@ public class ListOfEstates extends JFrame {
         JFrame frame = new JFrame();
         frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
         JPanel panel = new JPanel();
-        String[] columnNames = {"ID","Estate Type","Location","Area","Price","Sale Type"};
-        Object[][] datas = {{"1","2","3","4","5","6"},{"1","2","3","4","5","6"},{"1","2","3","4","5","6"}};
-        JTable table = new JTable(datas,columnNames);
+        DefaultTableModel model = new DefaultTableModel();
+        JTable table = new JTable(model);
         JScrollPane scrollPane = new JScrollPane(table);
+        model.addColumn("ID");
+        model.addColumn("Estate Type");
+        model.addColumn("Location");
+        model.addColumn("Area");
+        model.addColumn("Price");
+        model.addColumn("Sale Type");
+
+        Apartment[] result = RealEstate.ApartmentSearch(saleType,estateType);
+        for(int i = 0; i<result.length; ++i){
+            model.addRow(new Object[]{result[i].getId(), result[i].getType(), result[i].getLocation(),result[i].area,result[i].price, result[i].saleType});
+        }
+
         table.setFillsViewportHeight(true);
         JButton back = new JButton("BACK");
         back.addActionListener(new ActionListener(){

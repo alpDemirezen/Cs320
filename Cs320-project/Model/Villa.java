@@ -8,7 +8,6 @@ public class Villa extends House {
         super.area = area;
         super.location = location;
         super.realEstateType = realEstateType;
-        add(saleType,price,area,location,realEstateType);
     }
 
     public void add(String saleType, int price, int area, String location, String realEstateType) {

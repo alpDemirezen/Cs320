@@ -28,13 +28,13 @@
 				}],
 	"land": [
 				{
-						"saleType": "for sale"
+						"saleType": "for sale",
 						"price": 100000,
 						"area": 170,
 						"location": "Istanbul"
 				},
 				{
-						"saleType": "for sale"
+						"saleType": "for sale",
 						"price": 200000,
 						"area": 150,
 						"location": "Izmir"
