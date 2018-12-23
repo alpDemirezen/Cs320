@@ -3,41 +3,29 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class TypesOfSearch extends JFrame {
+public class SearchType extends JFrame {
     void initialize(){
         JFrame frame = new JFrame();
         frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
         JPanel buttonPanel = new JPanel();
         JPanel spacePanel = new JPanel();
         JPanel spacePanel2 = new JPanel();
-        JButton idSearch = new JButton("ID SEARCH");
-        idSearch.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e) {
-                frame.dispose();
-                new IdSearch().initialize();
-            }
-        });
-        JButton search = new JButton("SEARCH");
-        search.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e) {
-                frame.dispose();
-               SearchType search = new SearchType();
-               search.initialize();
-            }
-        });
+        JButton house = new JButton("HOUSE");
+        JButton others = new JButton("OTHERS");
         JButton back = new JButton("BACK");
         back.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e) {
                 frame.dispose();
-                new Operators().initialize();
+                TypesOfSearch typesOfSearch = new TypesOfSearch();
+                typesOfSearch.initialize();
             }
         });
         JLabel space = new JLabel("");
 
         buttonPanel.setLayout(new FlowLayout());
-        buttonPanel.add(idSearch);
+        buttonPanel.add(house);
         buttonPanel.add(space);
-        buttonPanel.add(search);
+        buttonPanel.add(others);
 
         spacePanel2.add(back);
 
